@@ -5,6 +5,8 @@ import axios from 'axios';
 
 function MainPage(){
 
+    
+
     const [notes, setNote] = useState([]);
 
     useEffect(()=>{
@@ -13,34 +15,19 @@ function MainPage(){
         .catch(err => console.log(err));
     })
 
-
- 
-
-    const article = [{
-        text: "elozelo jakis tutaj tekst ktory sobe pisze B) ",
-        title: "tytul tekstu"
-    }]
-
     return(<>
 
         <div id="logo">  jakies logo xd  </div>
 
         <Link to={'/addNote'}>ADD NOTES</Link>
 
-
         <ul>
             {
-                notes.map((element) => {
-                    return( <li>{element.title}</li>);
+                notes.map((note) => {
+                    return( <><li key={note._id}>{note.title}</li> <Link to={'/editNote/'+ note._id}>Edit</Link></>);
                 })
-                
-               
-
             }
         </ul>
-        
-    
-   
     </>);
 }
 
