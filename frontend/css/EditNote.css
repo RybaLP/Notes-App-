@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+    background-color: gray;
+
+}
+textarea{
+    display: flex;
+    width: 80%;
+    height: 12lh;
+}
