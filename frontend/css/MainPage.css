@@ -1,4 +1,24 @@
-body{
+body {
     margin: 0;
-    
+    font-family: 'Arial', sans-serif;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,121,50,1) 35%, rgba(0,212,255,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    height: 100vh;
 }
+
+.logo {
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    padding: 20px 40px;
+    border-radius: 0.8em;
+    border: 0.3em solid rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: max-content; 
+    margin: 20px auto; 
+}
+

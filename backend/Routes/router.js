@@ -17,10 +17,6 @@ router.post('/addNote', (req, res) => {
         .catch(err => res.json(err));
 });
 
-router.delete('/deleteNote/:id', (req,res)=>{
-    const id = req.params({_id: id});
-    
-})
 
 router.get('/getNote/:id', (req,res)=>{
     const id = req.params.id;
@@ -31,9 +27,17 @@ router.get('/getNote/:id', (req,res)=>{
 
 router.put('/editnote/:id', (req,res)=>{
     const id = req.params.id;
-    NotesModel.findByIdAndUpdate({_id:id}, {title: req.body.title, text: req.body.text})
+    NotesModel.findByIdAndUpdate({_id:id}, {title: req.body.title, text: req.body.text, fontcolor: req.body.fontcolor, bgcolor: req.body.bgcolor})
     .then(notes => res.json(notes))
     .catch(err => res.json(err))
 })
+
+router.delete('/deletenote/:id', (req,res)=>{
+    const id = req.params.id; 
+    NotesModel.findOneAndDelete({_id: id})
+    .then(() => res.json({message: 'user deleted successfully'}))
+    .catch(err => res.json(err))
+})
+
 
 module.exports = router;

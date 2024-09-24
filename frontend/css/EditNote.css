@@ -1,10 +1,43 @@
-body{
-    margin: 0;
-    background-color: gray;
-
-}
-textarea{
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
     display: flex;
-    width: 80%;
-    height: 12lh;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
+
+.colors {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1em;
+    margin-right: 10px;
+}
+
+input[type="color"] {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+textarea {
+    height: 200px;
+    resize: none;
+}
+
+
+
+
